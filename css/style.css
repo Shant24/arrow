@@ -114,11 +114,9 @@ header h3._active {
 
 @media (max-width: 480px) {
   header h1 {
-    margin-left: 10px;
     font-size: 28px;
   }
   header h3 {
-    margin-left: 10px;
     font-size: 18px;
   }
 }
