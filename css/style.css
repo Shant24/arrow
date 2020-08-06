@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: roboto;
+  color: #fff;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+._anim-show {
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+._anim-show._active, ._active ._anim-show {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+}
+
+.background img {
+  height: 130vh;
+}
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+header h1 {
+  font-size: 50px;
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  position: absolute;
+  bottom: 30%;
+  left: 10%;
+}
+
+header h3 {
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+  margin-top: 10px;
+  font-size: 23px;
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+header h3._active {
+  -webkit-transition: all 0.8s ease 0.4s;
+  transition: all 0.8s ease 0.4s;
+}
+
+@media (max-width: 920px) {
+  header h1 {
+    font-size: 40px;
+  }
+  header h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  header h1, header h3 {
+    white-space: nowrap;
+    left: 50%;
+    bottom: 50%;
+    -webkit-transform: translate(-500%, 0) !important;
+            transform: translate(-500%, 0) !important;
+  }
+  header h1._anim-show._active, header h3._anim-show._active {
+    -webkit-transform: translate(-50%, 0) !important;
+            transform: translate(-50%, 0) !important;
+  }
+  header h3 {
+    bottom: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    margin-left: 10px;
+    font-size: 28px;
+  }
+  header h3 {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+}
+
+.loremContainer {
+  width: 100%;
+  background-color: #343334;
+  padding: 30px 15%;
+}
+
+.loremContainer .loremItem {
+  overflow: hidden;
+}
+
+@media (max-width: 920px) {
+  .loremContainer {
+    padding: 30px 10%;
+  }
+}
+
+.moments {
+  width: 100%;
+  background-color: #7E5345;
+  padding: 30px 15%;
+}
+
+.moments h3 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.moments .myMoments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.moments .imgContainer {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.moments .imgContainer.long {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.moments .imgContainer.long img {
+  width: auto;
+  height: 120px;
+}
+
+.moments .imgContainer img {
+  width: 120px;
+}
+
+@media (max-width: 920px) {
+  .moments {
+    padding: 30px 10%;
+  }
+}
+
+.zaza {
+  overflow: hidden;
+}
+
+@media (max-width: 780px) {
+  .zaza {
+    margin-top: 20px;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .zaza {
+    margin-top: 20px;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+
+.moment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.momentText {
+  margin-top: 10px;
+  width: 150px;
+  text-align: center;
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0.6s;
+  transition: all 0.8s ease 0.6s;
+}
+
+.punktsContainer {
+  width: 100%;
+  padding: 30px 15%;
+  background-color: #2E2E2E;
+}
+
+.punktsContainer h3 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.punktsContainer p {
+  margin-left: 25px;
+  position: relative;
+}
+
+.punktsContainer p::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -25px;
+  width: 15px;
+  height: 15px;
+  background-color: #78648F;
+  border-radius: 50%;
+}
+
+.punkts p {
+  -webkit-transform: translate(-150%, 0px);
+          transform: translate(-150%, 0px);
+  margin-bottom: 10px;
+}
+
+.punkts p:last-child {
+  margin-bottom: 0;
+}
+
+.punkts._active p:nth-child(1) {
+  -webkit-transition: -webkit-transform 0.8s ease 0s;
+  transition: -webkit-transform 0.8s ease 0s;
+  transition: transform 0.8s ease 0s;
+  transition: transform 0.8s ease 0s, -webkit-transform 0.8s ease 0s;
+}
+
+.punkts._active p:nth-child(2) {
+  -webkit-transition: -webkit-transform 0.8s ease 0.2s;
+  transition: -webkit-transform 0.8s ease 0.2s;
+  transition: transform 0.8s ease 0.2s;
+  transition: transform 0.8s ease 0.2s, -webkit-transform 0.8s ease 0.2s;
+}
+
+.punkts._active p:nth-child(3) {
+  -webkit-transition: -webkit-transform 0.8s ease 0.3s;
+  transition: -webkit-transform 0.8s ease 0.3s;
+  transition: transform 0.8s ease 0.3s;
+  transition: transform 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s;
+}
+
+.punkts._active p:nth-child(4) {
+  -webkit-transition: -webkit-transform 0.8s ease 0.4s;
+  transition: -webkit-transform 0.8s ease 0.4s;
+  transition: transform 0.8s ease 0.4s;
+  transition: transform 0.8s ease 0.4s, -webkit-transform 0.8s ease 0.4s;
+}
+
+.punkts._active p:nth-child(5) {
+  -webkit-transition: -webkit-transform 0.8s ease 0.5s;
+  transition: -webkit-transform 0.8s ease 0.5s;
+  transition: transform 0.8s ease 0.5s;
+  transition: transform 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
+}
+
+.punkts._active p:nth-child(6) {
+  -webkit-transition: -webkit-transform 0.8s ease 0.6s;
+  transition: -webkit-transform 0.8s ease 0.6s;
+  transition: transform 0.8s ease 0.6s;
+  transition: transform 0.8s ease 0.6s, -webkit-transform 0.8s ease 0.6s;
+}
+/*# sourceMappingURL=style.css.map */
